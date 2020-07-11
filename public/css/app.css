@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;
+
+400;500;600;700;800;900&display=swap);body {
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  padding: 25px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.orange {
+  color: #ff8e16;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+}
+
+header .navbar-brand {
+  color: #fff;
+  font-weight: 700;
+}
+
+.navigation {
+  text-align: right;
+  padding: 7px 0 0;
+}
+
+.navigation li {
+  display: inline-block;
+}
+
+.navigation li:nth-child(1) {
+  margin-right: 20px;
+}
+
+.navigation li a {
+  color: #fff;
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.53)), url(/images/hero.jpg?6e8985baefb5e8455c5796f15511204c);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 200px 0;
+}
+
+.hero h1 {
+  color: #fff;
+  width: 60%;
+}
+
+.hero .button {
+  background: #fff;
+  border-radius: 6px;
+  top: 30px;
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  padding: 14px 28px;
+}
+
+.stock {
+  padding: 50px 0;
+}
+
+.stock h2 {
+  text-align: center;
+}
+
+.stock .stock-wrapper img {
+  border-radius: 6px;
+}
+
+.stock .stock-wrapper h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff8e16;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.stock .stock-wrapper p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.stock .stock-wrapper .price {
+  font-weight: 700;
+  margin-top: 5px;
+}
+

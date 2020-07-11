@@ -1,0 +1,102 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+// Variables
+@import 'variables';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+nav {
+    padding: 25px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.orange {
+    color: $orange;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    .navbar-brand {
+        color: #fff;
+        font-weight: 700;
+    }
+}
+.navigation {
+    text-align: right;
+    padding: 7px 0 0;
+    li {
+        display: inline-block;
+
+        &:nth-child(1) {
+            margin-right: 20px;
+        }
+        a {
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+}
+
+
+.hero {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.53)),url("../public/img/hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 200px 0;
+
+    h1 {
+        color: #fff;
+        width: 60%;
+    }
+
+    .button {
+        background: #fff;
+        border-radius: 6px;
+        top: 30px;
+        position: relative;
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+        padding: 14px 28px;
+    }
+}
+
+.stock {
+    padding: 50px 0;
+    h2 {
+        text-align: center;
+    }
+    .stock-wrapper {
+        img {
+            border-radius: 6px;
+        }
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: $orange;
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+        p {
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+        .price {
+            font-weight: 700;
+            margin-top: 5px;
+        }
+    }
+}
