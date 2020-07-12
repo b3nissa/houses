@@ -31,7 +31,7 @@
     <div class="hero">
         <div class="container">
             <h1>Fundament Homes, het beste aanbod in huizen voor jou!</h1>
-            <a href="#" class="button">Bekijk laatste aanbod</a>
+            <a href="{{ route('index.show', $lastHouse) }}" class="button">Bekijk laatste aanbod</a>
         </div>
     </div>
 
@@ -46,7 +46,7 @@
                                 <img src="{{ asset("images/" . $house->image) }}">
                                 <h3> {{ $house->name }} </h3>
                                 <p> {{ $house->rooms  }} kamers </p>
-                                <p class="price"> &euro; {{ $house->price }}</p>
+                                @if($house->status->id === 3) <p class="price"> {{ $house->status->name }} </p> @else <p class="price"> &euro; {{ $house->price }}</p> @endif
                             </div>
                         </a>
                     </div>

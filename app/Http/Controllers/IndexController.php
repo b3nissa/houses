@@ -9,8 +9,9 @@ class IndexController extends Controller
 {
     public function index ()
     {
+        $lastHouse = House::all()->last();
         $houses = House::all();
-        return view('index.index', compact('houses'));
+        return view('index.index', compact('houses', 'lastHouse'));
     }
 
     public function show (House $house)
