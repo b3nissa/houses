@@ -20,29 +20,7 @@
 </head>
 <body>
 <main>
-    <header>
-        <nav>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <a class="navbar-brand" href="{{ route('index.index') }}"><span class="orange">Fundament</span> Houses</a>
-                    </div>
-                    <div class="col-md-4">
-                        <ul class="navigation">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Inloggen</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
 
-
-
-
-        </nav>
-
-
-    </header>
     @yield('content')
 </main>
 </body>

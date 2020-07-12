@@ -13,9 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group([''], function () {
-    Route::group(['prefix' => '', 'as' => 'index.'], function () {
-        Route::get('/', ['uses' => 'IndexController@index', 'as' => 'index']);
+Route::group(['prefix' => '', 'as' => 'index.'], function () {
+    Route::get('/', ['uses' => 'IndexController@index', 'as' => 'index']);
+    Route::get('/{house}/toon', ['uses' => 'IndexController@show', 'as' => 'show'] );
+});
+
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
+        Route::get('/', ['uses' => 'DashboardController@index', 'as' => 'index']);
+        Route::get('/toevoegen', ['uses' => 'HouseController@create', 'as' => 'create']);
+        Route::post('/opslaan', ['uses' => 'HouseController@store', 'as' => 'store']);
+        Route::get('/{house}/wijzigen', ['uses' => 'HouseController@edit', 'as' => 'edit']);
+        Route::post('/{house}/updaten', ['uses' => 'HouseController@update', 'as' => 'update']);
     });
 });
 
