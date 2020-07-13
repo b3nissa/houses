@@ -40,7 +40,7 @@
             <h2> Ons aanbod </h2>
             <div class="row mt-4">
                 @foreach($houses as $house)
-                    <div class="col-md-4">
+                    <div class="col-md-4 mb-4">
                         <a href="{{ route('index.show', $house) }}">
                             <div class="stock-wrapper">
                                 <img src="{{ asset("images/" . $house->image) }}">

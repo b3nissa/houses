@@ -27,28 +27,38 @@
 
 
     </header>
-    <div class="hero" style="padding: 150px 0 90px;">
+    <div class="hero" style="padding: 45px 0;">
         <div class="container">
-            <h1>{{ $house->name }}</h1>
+            <h1></h1>
         </div>
     </div>
     <div class="container py-4">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="{{ asset("images/" . $house->image) }}">
+        <div class="row mb-2 house-detail">
+            <div class="col-md-12">
+                <h2> {{ $house->name }} </h2>
+                <p class="price">@if($house->status->id != 3) &euro; {{ $house->price }} @else Dit huis is verkocht @endif</p>
             </div>
-            <div class="col-md-6">
-                @if($house->status->id != 3)<p><strong>Prijs: </strong>{{ $house->price }}</p>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <img class="show-img" src="{{ asset("images/" . $house->image) }}">
+            </div>
+            <div class="col-md-4">
+
+
+
+
+
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12">
                 <p><strong>Type huis:</strong>  {{ $house->type->name }}</p>
                 <p><strong>Status:</strong>  {{ $house->status->name }}</p>
                 <p><strong>Aantal kamers:</strong>  {{ $house->rooms }}</p>
                 <p>{{ $house->surface }} m2</p>
-                    @else
-                    <p> Verkocht </p>
-                @endif
-
-
             </div>
+
         </div>
     </div>
 
