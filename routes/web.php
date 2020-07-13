@@ -26,6 +26,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/opslaan', ['uses' => 'HouseController@store', 'as' => 'store']);
         Route::get('/{house}/wijzigen', ['uses' => 'HouseController@edit', 'as' => 'edit']);
         Route::post('/{house}/updaten', ['uses' => 'HouseController@update', 'as' => 'update']);
+        Route::delete('{house}/verwijder', ['uses' => 'HouseController@delete', 'as' => 'delete']);
     });
 });
 

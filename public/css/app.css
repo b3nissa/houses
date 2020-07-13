@@ -167,6 +167,11 @@ header .navbar-brand {
   color: #fff;
 }
 
+.btn {
+  background: #ff8e16;
+  color: #fff;
+}
+
 .navbar .navbar-brand {
   font-weight: 700;
   font-size: 1.25rem;

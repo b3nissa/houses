@@ -62,4 +62,10 @@ class HouseController extends Controller
         }
         return redirect()->back();
     }
+
+    public function delete(House $house)
+    {
+        $house->delete();
+        return redirect()->route('dashboard.index');
+    }
 }

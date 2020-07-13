@@ -6,6 +6,13 @@
             <div class="col-md-8">
                 <h1 class="page-title">Wijzig {{ $house->name }}</h1>
             </div>
+            <div class="col-md-4 text-right">
+                <form method="POST" action="{{ route('dashboard.delete', $house) }}">
+                    @csrf
+                    @method('delete')
+                    <button class="btn" type="submit">Verwijder</button>
+                </form>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
